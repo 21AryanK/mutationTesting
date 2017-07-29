@@ -1,0 +1,3 @@
+pytest-cov
+mock
+cosmic_ray
