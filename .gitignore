@@ -5,3 +5,6 @@ __pycache__/
 # Ignore unit test and coverage reports
 htmlcov/
 .coverage
+
+# Ignore IDE files
+.idea
