@@ -20,10 +20,10 @@ Why do we need Mutation Testing?
 **Isn't code coverage/branch coverage enough? No.**
 
 To demonstrate, do the following:
-* Run `scripts/runCodeCoverage` on the project.
+* Run `scripts/runCodeCoverage.sh` on the project.
 * This will open the code coverage report (`htmlcov/index.html`).  All branch coverage is 100%.
 * Open the `tests/test_simplenumber_ispositive.py` unit test.  You will see that it only has tests for positive and negative numbers, but there is no test for 0 (that test is currently commented out).
-* This means that if the condition in `SimpleNumber.isPositive()` method is accidentially changed from `>=` to `>`, there is no test that would catch that.
+* This means that if the condition in `SimpleNumber.is_positive()` method is accidentially changed from `>=` to `>`, there is no test that would catch that.
 
 Traditional test coverage (i.e line, statement, branch etc) measures only which code is executed by your tests. It does not check that your tests are actually able to detect faults in the executed code. **It is therefore only able to identify code that is definitely not tested**.
 
@@ -67,11 +67,11 @@ To see an example of an equivalent mutation, run `testMathMutations.sh`.  This s
 
 See that there is a mutation that lived (i.e. no test failed after the code was mutated).  The mutation that lived is that the `SimpleNumber.multiply_if_ones()` method was changed to do division instead of multiplication.  That is
 ```python
-return SimpleNumber(self._value * otherNumber._value);
+return SimpleNumber(self._value * other_number._value)
 ```
 was changed to:
 ```python
-return SimpleNumber(self._value / otherNumber._value);
+return SimpleNumber(self._value / other_number._value)
 ```
 No unit test failed, and this is considered an error.
 
