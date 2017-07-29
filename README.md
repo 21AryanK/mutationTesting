@@ -67,11 +67,11 @@ To see an example of an equivalent mutation, run `testMathMutations.sh`.  This s
 
 See that there is a mutation that lived (i.e. no test failed after the code was mutated).  The mutation that lived is that the `SimpleNumber.multiply_if_ones()` method was changed to do division instead of multiplication.  That is
 ```python
-return SimpleNumber(self._value * other_number._value)
+return SimpleNumber(self._value * other_number.get_value())
 ```
 was changed to:
 ```python
-return SimpleNumber(self._value / other_number._value)
+return SimpleNumber(self._value / other_number.get_value())
 ```
 No unit test failed, and this is considered an error.
 
