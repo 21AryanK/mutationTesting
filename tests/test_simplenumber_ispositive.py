@@ -15,6 +15,6 @@ class TestSimpleNumberIsPositive(TestCase):
     Uncomment this test to ensure the mutation testing passes.
     It tests the boundary condition of isPositive
     '''
-    # def test_boundary():
+    #def test_boundary(self):
     #    number = SimpleNumber(0)
-    #    assert number.is_positive()
+    #    self.assertTrue(number.is_positive())
