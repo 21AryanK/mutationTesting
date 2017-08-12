@@ -1,5 +1,8 @@
 Mutation Testing Demo
 =====================
+
+[![Build Status](https://travis-ci.org/johnnyleitrim/python-mutation-testing-demo.svg?branch=master)](https://travis-ci.org/johnnyleitrim/python-mutation-testing-demo)
+
 A quick description of mutation testing and examples using [Cosmic Ray](https://github.com/sixty-north/cosmic-ray/)
 
 What is Mutation Testing?
