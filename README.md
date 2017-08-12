@@ -2,6 +2,7 @@ Mutation Testing Demo
 =====================
 
 [![Build Status](https://travis-ci.org/johnnyleitrim/python-mutation-testing-demo.svg?branch=master)](https://travis-ci.org/johnnyleitrim/python-mutation-testing-demo)
+[![Coverage Status](https://coveralls.io/repos/github/johnnyleitrim/python-mutation-testing-demo/badge.svg?branch=master)](https://coveralls.io/github/johnnyleitrim/python-mutation-testing-demo?branch=master)
 
 A quick description of mutation testing and examples using [Cosmic Ray](https://github.com/sixty-north/cosmic-ray/)
 
