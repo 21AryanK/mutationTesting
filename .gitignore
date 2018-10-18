@@ -8,3 +8,6 @@ htmlcov/
 
 # Ignore IDE files
 .idea
+
+# Ignore Cosmic Ray session files
+cosmic-ray-session.json
