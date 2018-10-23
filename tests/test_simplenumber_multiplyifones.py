@@ -26,4 +26,4 @@ class TestSimpleNumberMultipleIfOnes(TestCase):
         # Test the numbers the other way around
         new_number = other_number.multiply_if_ones(number)
         self.assertEqual(new_number.get_value(), 2)
-        self.assertEqual(other_number.get_value(), 1)
+        self.assertEqual(number.get_value(), 1)
