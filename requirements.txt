@@ -1,2 +1,2 @@
 coverage
-cosmic_ray
+cosmic_ray>=3.2.0
