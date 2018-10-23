@@ -24,8 +24,10 @@ class SimpleNumber:
             return incrememter.increment(self)
         return self
 
-    # I think we can all agree this is a silly method, but here to demonstrate equivalent mutations
     def multiply_if_ones(self, other_number: 'SimpleNumber') -> 'SimpleNumber':
+        """
+        I think we can all agree this is a silly method, but here to demonstrate equivalent mutations
+        """
         if self._value == 1 and other_number.get_value() == 1:
             return SimpleNumber(self._value * other_number.get_value())
         return self
