@@ -5,5 +5,5 @@ SCRIPT_DIR=$(dirname $0)
 source $SCRIPT_DIR/procs.sh
 
 cd $SCRIPT_DIR/..
-runCosmicRay
+runMutationTests AOR
 cd $ORIG_CWD

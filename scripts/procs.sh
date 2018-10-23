@@ -15,13 +15,6 @@ openUrl() {
 	esac
 }
 
-runCosmicRay() {
-	cosmic-ray init cosmic-ray.unittest.yaml cosmic-ray-session
-	cosmic-ray exec cosmic-ray-session
-	if [ ! -d $CR_DIR ]; then
-		mkdir -p $CR_DIR
-	fi	
-	CR_FILE=$CR_DIR/index.html
-	cosmic-ray dump cosmic-ray-session | cr-html > $CR_FILE
-	openUrl $CR_FILE	
+runMutationTests() {
+    mut.py --target simplenumber.SimpleNumber --unit-test tests --operator $1 -m
 }

@@ -2,13 +2,9 @@
 __pycache__/
 *.py[cod]
 
-# Ignore unit test, coverage and cosmic-ray reports
+# Ignore unit test and coverage reports
 htmlcov/
 .coverage
-.cosmic-ray
 
 # Ignore IDE files
 .idea
-
-# Ignore Cosmic Ray session files
-cosmic-ray-session.json
