@@ -16,5 +16,5 @@ openUrl() {
 }
 
 runMutationTests() {
-    mut.py --target simplenumber.SimpleNumber --unit-test tests --operator $1 -m
+    mut.py --target simplenumber.SimpleNumber --unit-test tests --operator $1 --report-html .mutpy
 }

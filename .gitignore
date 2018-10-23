@@ -2,9 +2,10 @@
 __pycache__/
 *.py[cod]
 
-# Ignore unit test and coverage reports
+# Ignore unit test, coverage and mutation reports
 htmlcov/
 .coverage
+.mutpy
 
 # Ignore IDE files
 .idea
