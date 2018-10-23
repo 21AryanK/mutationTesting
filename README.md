@@ -4,7 +4,7 @@ Mutation Testing Demo
 [![Build Status](https://travis-ci.org/johnnyleitrim/python-mutation-testing-demo.svg?branch=master)](https://travis-ci.org/johnnyleitrim/python-mutation-testing-demo)
 [![Coverage Status](https://coveralls.io/repos/github/johnnyleitrim/python-mutation-testing-demo/badge.svg?branch=master)](https://coveralls.io/github/johnnyleitrim/python-mutation-testing-demo?branch=master)
 
-A quick description of mutation testing and examples using [Cosmic Ray](https://github.com/sixty-north/cosmic-ray/)
+A quick description of mutation testing and examples using [MutPy](https://github.com/mutpy/mutpy)
 
 What is Mutation Testing?
 =========================
@@ -37,7 +37,7 @@ This project contains a few examples of unit tests that have 100% branch coverag
 
 Demo 1
 ------
-Run `testBoundaryMutations.sh`.  This script will run the mutation tests and automatically opens the Cosmic Ray report (located at `.cosmic-ray/index.html`)
+Run `testBoundaryMutations.sh`.  This script will run the mutation tests and automatically opens the MutPy report (located at `.mutpy/index.html`)
 
 See that there is a mutation that lived (i.e. no test failed after the code was mutated).  The mutation that lived is that the condition in `SimpleNumber.is_positive()` method was changed from `>=` to `>`, but no unit test failed.  This means we are missing a test case for the `0` bondary condition.
 
@@ -48,7 +48,7 @@ This time, you will see that all mutations were killed, as the `test_boundary` t
 
 Demo 2
 ------
-Run `testReturnValuesMutations.sh`.  This script will run the mutation tests and automatically opens the Cosmic Ray report (located at `.cosmic-ray/index.html`)
+Run `testReturnValuesMutations.sh`.  This script will run the mutation tests and automatically opens the MutPy report (located at `.mutpy/index.html`)
 
 See that there is a mutation that lived (i.e. no test failed after the code was mutated).  The mutation that lived is that the `SimpleNumber.increment()` method was changed to always return `None`, but no unit test failed.  This means our unit tests are not checking the return value of the `increment` method.
 
@@ -67,7 +67,7 @@ There is also the (rare) possibility false positives.  It is possible that certa
 
 Equivalent Mutations
 --------------------
-To see an example of an equivalent mutation, run `testMathMutations.sh`.  This script will run the mutation tests and automatically opens the Cosmis Ray report (located at `.cosmic-ray/index.html`)
+To see an example of an equivalent mutation, run `testMathMutations.sh`.  This script will run the mutation tests and automatically opens the MutPy report (located at `.mutpy/index.html`)
 
 See that there is a mutation that lived (i.e. no test failed after the code was mutated).  The mutation that lived is that the `SimpleNumber.multiply_if_ones()` method was changed to do division instead of multiplication.  That is
 ```python
