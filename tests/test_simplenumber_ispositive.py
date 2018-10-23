@@ -1,5 +1,6 @@
-from simplenumber import SimpleNumber
 from unittest import TestCase
+
+from simplenumber import SimpleNumber
 
 
 class TestSimpleNumberIsPositive(TestCase):
@@ -11,10 +12,10 @@ class TestSimpleNumberIsPositive(TestCase):
         number = SimpleNumber(-1)
         self.assertFalse(number.is_positive())
 
-    '''
+    """
     Uncomment this test to ensure the mutation testing passes.
     It tests the boundary condition of isPositive
-    '''
+    """
     #def test_boundary(self):
     #    number = SimpleNumber(0)
     #    self.assertTrue(number.is_positive())
