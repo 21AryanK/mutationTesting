@@ -1,7 +1,9 @@
 #!/bin/bash
 
+ORIG_CWD=$PWD
 SCRIPT_DIR=$(dirname $0)
 source $SCRIPT_DIR/procs.sh
 
-mvn -f $SCRIPT_DIR/pom.xml clean test-compile org.pitest:pitest-maven:mutationCoverage -Dpitest.mutator=CONDITIONALS_BOUNDARY
-openUrl target/pit-reports/index.html
+cd $SCRIPT_DIR/..
+runCosmicRay
+cd $ORIG_CWD
