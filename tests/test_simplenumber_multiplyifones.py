@@ -9,6 +9,7 @@ class TestSimpleNumberMultipleIfOnes(TestCase):
         other_number = SimpleNumber(1)
         new_number = number.multiply_if_ones(other_number)
         self.assertEqual(new_number.get_value(), 1)
+        self.assertNotEqual(new_number, number)
 
     def test_no_ones(self):
         number = SimpleNumber(2)
@@ -16,6 +17,7 @@ class TestSimpleNumberMultipleIfOnes(TestCase):
         new_number = number.multiply_if_ones(other_number)
         self.assertEqual(new_number.get_value(), 2)
         self.assertEqual(other_number.get_value(), 3)
+        self.assertEqual(new_number, number)
 
     def test_only_one_one(self):
         number = SimpleNumber(1)
@@ -23,7 +25,12 @@ class TestSimpleNumberMultipleIfOnes(TestCase):
         new_number = number.multiply_if_ones(other_number)
         self.assertEqual(new_number.get_value(), 1)
         self.assertEqual(other_number.get_value(), 2)
-        # Test the numbers the other way around
-        new_number = other_number.multiply_if_ones(number)
+        self.assertEqual(new_number, number)
+
+    def test_only_one_one_reverse(self):
+        number = SimpleNumber(2)
+        other_number = SimpleNumber(1)
+        new_number = number.multiply_if_ones(other_number)
         self.assertEqual(new_number.get_value(), 2)
-        self.assertEqual(number.get_value(), 1)
+        self.assertEqual(other_number.get_value(), 1)
+        self.assertEqual(new_number, number)
