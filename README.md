@@ -35,3 +35,6 @@ Examples
 ========
 This project contains a few examples of unit tests that have 100% branch coverage.  However, running mutation testing on them will show that there are gaps in the tests.  Each unit test has commented out sections that are the "missing" tests to make the mutation tests pass.
 
+For Executing the code:
+
+python env/Scripts/mut.py --target simplenumber --unit-test tests
